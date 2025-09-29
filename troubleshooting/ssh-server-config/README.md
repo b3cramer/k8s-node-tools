@@ -21,7 +21,7 @@ https://raw.githubusercontent.com/GoogleCloudPlatform\
 ```
 kubectl apply -f \
 https://raw.githubusercontent.com/GoogleCloudPlatform\
-/k8s-node-tools/master/ssh-server-config/set-login-grace-time-gdcso-vmware.yaml
+/k8s-node-tools/master/troubleshooting/ssh-server-config/set-login-grace-time-gdcso-vmware.yaml
 ```
 
 ## How to get the result?
@@ -35,7 +35,7 @@ kubectl -n kube-system logs -l app=ssh-server-config -c ssh-server-config
 ```
 kubectl delete -f \
 https://raw.githubusercontent.com/GoogleCloudPlatform\
-/k8s-node-tools/master/ssh-server-config/set-login-grace-time.yaml
+/k8s-node-tools/master/troubleshooting/ssh-server-config/set-login-grace-time.yaml
 ```
 
 

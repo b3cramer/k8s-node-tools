@@ -23,7 +23,7 @@ This tool only runs on nodes with a specific label. You must label the node(s) y
 2.  Before applying, you can edit the file to change the values for `CONTAINER_LOG_MAX_SIZE` (e.g., "20Mi") and `CONTAINER_LOG_MAX_FILES` (e.g., "10").
 3.  Apply the DaemonSet to your cluster:
     ```bash
-    kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-node-tools/master/kubelet-log-config/kubelet-log-config.yaml
+    kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-node-tools/master/kubelet/kubelet-log-config/kubelet-log-config.yaml
     ```
 
 ---
@@ -46,4 +46,4 @@ You can verify that the script ran successfully in two ways:
 You can remove the DaemonSet to prevent it from configuring any new nodes.
 
 ```bash
-kubectl delete -f https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-node-tools/master/kubelet-log-config/kubelet-log-config.yaml
+kubectl delete -f https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-node-tools/master/kubelet/kubelet-log-config/kubelet-log-config.yaml

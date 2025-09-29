@@ -24,7 +24,7 @@ This tool runs as **privileged** and adds performance overhead. Use it only for 
 #### How to use it?
 Apply it to a labeled node by running the following command.
 ```
-kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-node-tools/master/perf/perf-record.yaml
+kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-node-tools/master/troubleshooting/perf/perf-record.yaml
 ```
 
 #### How to get the result?
@@ -42,7 +42,7 @@ This tool runs as **privileged** and adds performance overhead. Use it only for 
 #### How to use it?
 Apply it to a labeled node by running the following command. You can edit the YAML to change the `TARGET_PGREP` environment variable to trace a specific process (e.g., "containerd") or leave it empty to trace the whole system.
 ```
-kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-node-tools/master/perf/perf-trace.yaml
+kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-node-tools/master/troubleshooting/perf/perf-trace.yaml
 ```
 
 #### How to get the result?
@@ -53,5 +53,5 @@ The trace data is not in the pod logs. It is saved directly on the node's filesy
 
 #### How to remove it?
 ```
-kubectl delete -f https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-node-tools/master/perf/perf-trace.yaml
+kubectl delete -f https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-node-tools/master/troubleshooting/perf/perf-trace.yaml
 ```

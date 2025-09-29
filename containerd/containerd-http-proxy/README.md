@@ -13,7 +13,7 @@ kubectl apply -f sample_configmap.yaml
 2. Deploy the daemonset in `configure_http_proxy.yaml`. As it has been specifically allowlisted for GKE Autopilot, this **manifest in this repo cannot be changed if you are deploying to GKE Autopilot mode clusters**.
 
 ```
-kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-node-tools/master/containerd_http_proxy/configure_http_proxy.yaml
+kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-node-tools/master/containerd/containerd_http_proxy/configure_http_proxy.yaml
 ```
 
 ## Note
@@ -21,5 +21,5 @@ kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-node-
 
 How to remove it?
 ```bash
-kubectl delete -f  https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-node-tools/master/containerd_http_proxy/containerd-nofile-infinity-allowlist.yaml
+kubectl delete -f  https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-node-tools/master/containerd/containerd_http_proxy/containerd-nofile-infinity-allowlist.yaml
 ```  
