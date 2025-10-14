@@ -6,7 +6,7 @@ This guide outlines the steps to configure the `LimitNOFILE` setting for the con
 Deploy the `AllowListSynchronizer` resource in `containerd-nofile-infinity-allowlist.yaml`. This resource updates [Autopilot's security policies](https://cloud.google.com/kubernetes-engine/docs/how-to/run-autopilot-partner-workloads#about-allowlistsynchronizer) to run the privileged daemonset.
     
 ```bash
-kubectl apply -f containerd-nofile-infinity-allowlist.yaml
+kubectl apply -f  https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-node-tools/master/containerd/containerd-nofile-infinity/containerd-nofile-infinity-allowlist.yaml
 ```  
 
 ## Instructions
@@ -19,3 +19,8 @@ kubectl apply -f containerd-nofile-infinity-allowlist.yaml
 
 ## Note
 **This DaemonSet is specifically allowlisted for GKE Autopilot clusters.** Attempting to deploy privileged DaemonSets that modify the underlying host OS on Autopilot may lead to unexpected behavior, stability issues, or prevented by Autopilot's security policies. If you need to make any necessary change, please ask your Google Cloud sales representative to reach to the GKE Autopilot team.
+
+How to remove it?
+```bash
+kubectl delete -f  https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-node-tools/master/containerd/containerd-nofile-infinity/containerd-nofile-infinity-allowlist.yaml
+```  

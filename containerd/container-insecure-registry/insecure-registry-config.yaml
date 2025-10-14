@@ -21,7 +21,7 @@ spec:
       hostPID: true
       containers:
         - name: startup-script
-          image: registry.k8s.io/startup-script:v2
+          image: gke.gcr.io/startup-script:v2
           imagePullPolicy: Always
           securityContext:
             privileged: true
