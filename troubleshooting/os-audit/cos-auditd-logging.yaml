@@ -39,8 +39,11 @@ spec:
       dnsPolicy: Default
       initContainers:
       - name: cos-auditd-setup
-        image: ubuntu
-        command: ["chroot", "/host", "systemctl", "start", "cloud-audit-setup"]
+        image: gke.gcr.io/gke-distroless/bash
+        command:
+          - /bin/bash
+          - -c
+          - "chroot /host systemctl enable --now cloud-audit-setup.service"
         securityContext:
           privileged: true
         volumeMounts:
