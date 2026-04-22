@@ -1,0 +1,7 @@
+registryHosts:
+- server: "REGISTRY_ADDRESS"
+  hosts:
+  - host: "http://REGISTRY_ADDRESS"
+    capabilities:
+    - "HOST_CAPABILITY_PULL"
+    - "HOST_CAPABILITY_RESOLVE"
