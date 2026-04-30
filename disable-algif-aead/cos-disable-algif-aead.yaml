@@ -103,3 +103,8 @@ spec:
       nodeSelector:
         "cloud.google.com/gke-algif-aead-disabled": "true"
         "cloud.google.com/gke-os-distribution": "cos"
+      tolerations:
+      - key: kubernetes.io/arch
+        operator: Equal
+        value: arm64
+        effect: NoSchedule
