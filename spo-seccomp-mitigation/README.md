@@ -1,6 +1,3 @@
-### Updated `README.md`
-
-
 # SPO Seccomp Mitigation for CVE-2026-31431 (Copy Fail)
 
 This directory provides a mitigation for CVE-2026-31431 using the Kubernetes Security Profiles Operator (SPO). It uses a custom `SeccompProfile` that copies containerd's default allowed syscalls but blocks both `AF_VSOCK` and `AF_ALG` (socket family 38).
