@@ -70,7 +70,8 @@ spec:
             rmdir "${efi}"
             if [[ "${secure_boot}" == "True" ]]; then
               echo "Secure Boot is enabled. Boot options cannot be changed."
-              exit 1
+              sleep inf
+              exit 0
             fi
           }
 
