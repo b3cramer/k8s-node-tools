@@ -109,3 +109,6 @@ spec:
         operator: Equal
         value: arm64
         effect: NoSchedule
+      - key: storage-node
+        operator: Exists
+        effect: NoSchedule
